@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <title>Indice</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+    
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .gradient-background {
+      flex-grow: 1;
+    }
+  </style>
+
+</head>
+
+<body>
+  
+  <header>
+    
+    <div 
+    class=" bg-gray-900 
+            py-7 
+            flex justify-between 
+            items-center">
+      
+    <h1 
+    class=" font-bold 
+            text-6xl 
+            text-gray-200 
+            font-mono 
+            hover:text-white 
+            transition ease-out
+            mx-12">Cue<span 
+    class="text-red-400">v</span>ana 3</h1>
+      
+    <svg xmlns="http://www.w3.org/2000/svg" 
+              fill="none" 
+              viewBox="0 0 24 24" 
+              stroke-width="1.5" 
+              stroke="currentColor" 
+              class=" mx-12 w-10 h-10 
+                      stroke-gray-500 
+                      hover:scale-150
+                      transition ease">
+        
+      <path stroke-linecap="round" 
+              stroke-linejoin="round" 
+              d="M3.375 19.5h17.25m-17.25 0a1.125 1.125 0 0 1-1.125-1.125M3.375 19.5h1.5C5.496 19.5 6 18.996 6 18.375m-3.75 0V5.625m0 12.75v-1.5c0-.621.504-1.125 1.125-1.125m18.375 2.625V5.625m0 12.75c0 .621-.504 1.125-1.125 1.125m1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125m0 3.75h-1.5A1.125 1.125 0 0 1 18 18.375M20.625 4.5H3.375m17.25 0c.621 0 1.125.504 1.125 1.125M20.625 4.5h-1.5C18.504 4.5 18 5.004 18 5.625m3.75 0v1.5c0 .621-.504 1.125-1.125 1.125M3.375 4.5c-.621 0-1.125.504-1.125 1.125M3.375 4.5h1.5C5.496 4.5 6 5.004 6 5.625m-3.75 0v1.5c0 .621.504 1.125 1.125 1.125m0 0h1.5m-1.5 0c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125m1.5-3.75C5.496 8.25 6 7.746 6 7.125v-1.5M4.875 8.25C5.496 8.25 6 8.754 6 9.375v1.5m0-5.25v5.25m0-5.25C6 5.004 6.504 4.5 7.125 4.5h9.75c.621 0 1.125.504 1.125 1.125m1.125 2.625h1.5m-1.5 0A1.125 1.125 0 0 1 18 7.125v-1.5m1.125 2.625c-.621 0-1.125.504-1.125 1.125v1.5m2.625-2.625c.621 0 1.125.504 1.125 1.125v1.5c0 .621-.504 1.125-1.125 1.125M18 5.625v5.25M7.125 12h9.75m-9.75 0A1.125 1.125 0 0 1 6 10.875M7.125 12C6.504 12 6 12.504 6 13.125m0-2.25C6 11.496 5.496 12 4.875 12M18 10.875c0 .621-.504 1.125-1.125 1.125M18 10.875c0 .621.504 1.125 1.125 1.125m-2.25 0c.621 0 1.125.504 1.125 1.125m-12 5.25v-5.25m0 5.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125m-12 0v-1.5c0-.621-.504-1.125-1.125-1.125M18 18.375v-5.25m0 5.25v-1.5c0-.621.504-1.125 1.125-1.125M18 13.125v1.5c0 .621.504 1.125 1.125 1.125M18 13.125c0-.621.504-1.125 1.125-1.125M6 13.125v1.5c0 .621-.504 1.125-1.125 1.125M6 13.125C6 12.504 5.496 12 4.875 12m-1.5 0h1.5m-1.5 0c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125M19.125 12h1.5m0 0c.621 0 1.125.504 1.125 1.125v1.5c0 .621-.504 1.125-1.125 1.125m-17.25 0h1.5m14.25 0h1.5" />
+    </svg>
+    
+    </div>
+  
+  </header>
+  
+
+
+  <div 
+    class=" gradient-background 
+            bg-gradient-to-b 
+            from-gray-800 
+            to-black">
+
+<!--INICIO DE TODAS LAS FILAS-->
+            {% for film in films %} <!--INICIO DE LA CHINGADERA DE BASE DE DATOS-->
+            <div class="flex flex-row gap-4 mx-12 my-4">
+
+              <div class="basis-1/2 
+                          bg-gray-700 
+                          rounded-lg 
+                          py-2 
+                          px-2
+                          hover:bg-gray-600
+                          transition ease-out  
+                          font-bold">
+                          <span class="text-3xl text-gray-300"> </span>                             <!--Id de la pelicula-->
+                          <span class="text-3xl text-gray-300">{{ film.title }}</span>                <!--Titulo de la pelicula--> 
+                          <span class="text-3xl text-gray-300">{{ film.release_year }}</span>        <!--Año de lanzamiento-->
+                          <p class="text-gray-400 text-1x1 text-justify">                             <!--Descripcion de la pelicula-->
+                            <span class="text-red-300">{{ film.category }}</span>                              <!--Categoria-->
+                            {{ film.description }}</p>
+                        </div>   
+
+              <div class="basis-1/4
+                          bg-gray-700 
+                          rounded-lg 
+                          px-2 
+                          py-2
+                          hover:bg-gray-600
+                          transition ease-out 
+                          font-bold">                          
+                          <span class="text-2xl text-gray-300">A cerca de la pelicula...</span>
+                          
+                          <p class="text-slate-300 hover:text-yellow-100 transition ease-out">Lenguaje original: <span>{{ film.original_language }}</span></p>
+                          <p class="text-slate-300 hover:text-yellow-100 transition ease-out">Numero de Actores:   <span>{{ film.actor_count }}</span> </p>
+                          <p class="text-slate-300 hover:text-green-100 transition ease-out">Lenguajes disponibles: <span>{{ film.language }}</span></p>
+                          <p class="text-slate-300 hover:text-white transition ease-out">Duración: <span>{{ film.length }}</span></p>
+                          
+                          <p class="text-slate-300 hover:text-white transition ease-out">Rating
+                            
+                            <svg  xmlns="http://www.w3.org/2000/svg" 
+                                  fill="none" 
+                                  viewBox="0 0 24 24" 
+                                  stroke-width="2" 
+                                  stroke="currentColor" 
+                                  class="inline-block w-6 
+                                  hover:fill-yellow-200
+                                  transition ease-out">
+
+                            <path stroke-linecap="round" 
+                                  stroke-linejoin="round" 
+                                  d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                          </svg>
+                          : <span> {{ film.rating }} </span></p>
+
+                          <p class="text-slate-300 hover:text-white transition ease-out">Última actualización: <span>{{ film.last_update }}</span></p>
+                        </div>
+
+              <div class="basis-1/4 
+                          bg-gray-700 
+                          rounded-lg 
+                          px-2
+                          py-2
+                          hover:bg-gray-600
+                          transition ease-out 
+                          font-bold">
+                          <span class="text-2xl text-gray-300">Información sobre renta</span>
+                          <p class="text-slate-300 hover:text-white transition ease-out">Rental rate: <span>{{ film.rental_rate }}</span></p>
+                          <p class="text-slate-300 hover:text-white transition ease-out">Tiempo de renta: <span>{{ film.rental_duration }}</span></p>
+                          <p class="text-slate-300 hover:text-white transition ease-out">Costo de renta: <span>{{ film.replacement_cost }}</span></p>
+                          <p class="text-slate-300 hover:text-white transition ease-out">Propiedades: <span>{{ film.special_features }}</span></p>
+                          
+                          
+                        </div>
+
+            </div>
+            {% endfor %}
+            <!--FIN DE TODAS LAS FILAS-->
+
+  </div>
+
+  <!-- Button to refresh the page -->
+  <div class="flex justify-center my-4">
+    <button onclick="window.location.reload()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+      Refresh Page
+    </button>
+  </div>
+
+</body>
+</html>
